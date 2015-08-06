@@ -11,6 +11,17 @@ $(function () {
                     selected: 4
                 },
 
+                rangeSelector: {
+                 selected: 4,
+                 inputEnabled: false,
+                 buttonTheme: {
+                     visibility: 'hidden'
+                 },
+                 labelStyle: {
+                     visibility: 'hidden'
+                 }
+                },
+
                 yAxis: {
                     labels: {
                         formatter: function () {
