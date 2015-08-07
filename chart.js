@@ -53,9 +53,10 @@ $(function() {
         {
             type: 'flags',
             data: [],
+            name: 'Flags on axis',
             onSeries: 'dataseries',
             shape: 'circlepin',
-            shape: 'url(kitty.png)',
+            shape: 'url(turkey.png)',
             width: 12,
             }]
     });
