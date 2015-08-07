@@ -59,4 +59,11 @@ $(function() {
             width: 12,
             }]
     });
+    $('#clearit').click(function() {
+      var chart = $('#container').highcharts();
+      var series = chart.series;
+       for (i = 0; i < series.length; i++){
+         series[i].hide();
+       }
+     });
 });
