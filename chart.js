@@ -6,7 +6,14 @@ $(function() {
         },
 
         rangeSelector: {
-            selected: 1
+            selected: 4,
+            inputEnabled: false,
+            buttonTheme: {
+                visibility: 'hidden'
+            },
+            labelStyle: {
+                visibility: 'hidden'
+            }
         },
         plotOptions:{
              series:{
