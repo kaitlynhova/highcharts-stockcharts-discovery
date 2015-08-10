@@ -184,7 +184,7 @@ $(function() {
     $('#desiredpitch').click(function() {
       var chart = $('#container').highcharts();
       var series = chart.series;
-      var seriesIndex = 2
+      var seriesIndex = 6
       if(series[seriesIndex].visible) {
         series[seriesIndex].hide();
       } else {
