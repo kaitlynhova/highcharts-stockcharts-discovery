@@ -145,6 +145,7 @@ $(function() {
                   }]
     });
     $('#clearit').click(function() {
+      $('#values').find('input[type=checkbox]:checked').removeAttr('checked');
       var chart = $('#container').highcharts();
       var series = chart.series;
        for (i = 0; i < series.length; i++){
