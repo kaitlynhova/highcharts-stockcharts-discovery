@@ -1,4 +1,4 @@
-var usdeur = [
+var data = [
 [11035, 0.00, -0.37, 0.00, 2.27],
 [11135, 0.00, -0.42, 0.00, 2.13],
 [11235, 0.00, -0.46, 0.00, 1.99],
@@ -8527,4 +8527,20 @@ var usdeur = [
 [874588, 35.00, 179.15, 14.74, 10.82],
 [874688, 35.00, 179.15, 14.74, 10.82],
 [874788, 35.00, 179.15, 14.74, 10.82]
-]
+];
+
+var arrayLength = data.length;
+
+var roll = [];
+var desiredroll =[];
+var pitch = [];
+var desiredpitch = [];
+
+
+for (var i = 0; i < arrayLength; i++) {
+    var time = data[i][0];
+    roll.push([time, data[i][1]]);
+    desiredroll.push([time, data[i][2]]);
+    pitch.push([time, data[i][3]]);
+    desiredpitch.push([time, data[i][4]]);
+};
