@@ -36,9 +36,9 @@ $(function() {
              }
          },
         series: [{
-            name: 'USD',
+            name: 'Roll',
             id: 'dataseries',
-            data: usdeur,
+            data: roll,
             events: {
                 click: function(event) {
 
