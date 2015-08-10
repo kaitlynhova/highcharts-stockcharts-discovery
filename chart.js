@@ -30,14 +30,13 @@ $(function() {
                      events:{
                          click: function () {
                            document.getElementById("dat-data").innerHTML = 'Category: ' + this.category + ', value: ' + this.y;
-                           alert(this.y + '+' + (this.x +1) + this.name );
                          }
                      }
                  }
              }
          },
         series: [{
-            name: 'USD to EUR',
+            name: 'USD',
             id: 'dataseries',
             data: usdeur,
             events: {
@@ -53,10 +52,13 @@ $(function() {
         {
             type: 'flags',
             data: [],
-            name: 'Flags on axis',
+            title: ' 1',
+            style: { // text style
+                    color: 'white'
+                },
             onSeries: 'dataseries',
             shape: 'circlepin',
-            shape: 'url(turkey.png)',
+            shape: 'url(pointer.png)',
             width: 12,
             }]
     });
