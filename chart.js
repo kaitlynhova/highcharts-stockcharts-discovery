@@ -52,7 +52,7 @@ $(function() {
         {
             type: 'flags',
             data: [],
-            title: ' 1',
+            title: ' #',
             style: { // text style
                     color: 'white'
                 },
