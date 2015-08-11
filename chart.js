@@ -155,7 +155,7 @@ $(function() {
               ]
     });
     $('#clearit').click(function() {
-      $('#values').find('input[type=checkbox]:checked').trigger( "click" );
+      $('#checkboxes').find('input[type=checkbox]:checked').trigger( "click" );
 
      });
     $('#roll').click(function() {
