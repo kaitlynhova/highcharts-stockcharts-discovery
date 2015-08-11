@@ -5,6 +5,10 @@ $(function() {
             renderTo: 'container'
         },
 
+        credits: {
+            enabled: false
+        },
+
         tooltip: {
             shared: true,
             crosshairs: true
@@ -147,11 +151,12 @@ $(function() {
                   shape: 'circlepin',
                   shape: 'url(pointer.png)',
                   width: 12,
-                  }]
+                },
+              ]
     });
     $('#clearit').click(function() {
       $('#values').find('input[type=checkbox]:checked').trigger( "click" );
-    
+
      });
     $('#roll').click(function() {
       var chart = $('#container').highcharts();
