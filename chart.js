@@ -1,4 +1,42 @@
 $(function() {
+    var list = ['roll', 'desiredroll', 'pitch', 'desiredpitch'];
+    var datalist = [roll, desiredroll, pitch, desiredpitch];
+    var series = [],
+    i = 0;
+
+    for(i; i < list.length ;i++){
+        console.log(list[i]);
+        series.push(
+        {
+           name: list[i],
+           id: 'dataseries',
+           visible: false,
+           data: datalist[i],
+           events: {
+               click: function(event) {
+
+                   this.chart.series[1].addPoint({
+                       x: event.point.x,
+                       title: ''
+                   });
+               }
+
+           }},
+       {
+         type: 'flags',
+         data: [],
+         title: ' #',
+         style: { // text style
+                 color: 'white'
+             },
+         onSeries: 'dataseries',
+         shape: 'circlepin',
+         shape: 'url(pointer.png)',
+         width: 12,
+       }
+      );
+    }
+
     var chart = new Highcharts.StockChart({
 
         chart: {
@@ -44,115 +82,7 @@ $(function() {
                  }
              }
          },
-        series: [{
-            name: 'Roll',
-            id: 'dataseries',
-            visible: false,
-            data: roll,
-            events: {
-                click: function(event) {
-
-                    this.chart.series[1].addPoint({
-                        x: event.point.x,
-                        title: ''
-                    });
-                }
-
-            }},
-        {
-            type: 'flags',
-            data: [],
-            title: ' #',
-            style: { // text style
-                    color: 'white'
-                },
-            onSeries: 'dataseries',
-            shape: 'circlepin',
-            shape: 'url(pointer.png)',
-            width: 12,
-          },
-          {
-              name: 'Desiredroll',
-              id: 'dataseries',
-              visible: false,
-              data: desiredroll,
-              events: {
-                  click: function(event) {
-
-                      this.chart.series[1].addPoint({
-                          x: event.point.x,
-                          title: ''
-                      });
-                  }
-
-              }},
-          {
-              type: 'flags',
-              data: [],
-              title: ' #',
-              style: { // text style
-                      color: 'white'
-                  },
-              onSeries: 'dataseries',
-              shape: 'circlepin',
-              shape: 'url(pointer.png)',
-              width: 12,
-            },
-            {
-                name: 'Pitch',
-                id: 'dataseries',
-                visible: false,
-                data: pitch,
-                events: {
-                    click: function(event) {
-
-                        this.chart.series[1].addPoint({
-                            x: event.point.x,
-                            title: ''
-                        });
-                    }
-
-                }},
-            {
-                type: 'flags',
-                data: [],
-                title: ' #',
-                style: { // text style
-                        color: 'white'
-                    },
-                onSeries: 'dataseries',
-                shape: 'circlepin',
-                shape: 'url(pointer.png)',
-                width: 12,
-              },
-              {
-                  name: 'Desiredpitch',
-                  id: 'dataseries',
-                  visible: false,
-                  data: desiredpitch,
-                  events: {
-                      click: function(event) {
-
-                          this.chart.series[1].addPoint({
-                              x: event.point.x,
-                              title: ''
-                          });
-                      }
-
-                  }},
-              {
-                  type: 'flags',
-                  data: [],
-                  title: ' #',
-                  style: { // text style
-                          color: 'white'
-                      },
-                  onSeries: 'dataseries',
-                  shape: 'circlepin',
-                  shape: 'url(pointer.png)',
-                  width: 12,
-                },
-              ]
+        series: series
     });
 
   // CLEAR GRAPH BUTTON
@@ -170,4 +100,5 @@ $(function() {
      series[seriesIndex].show();
    }
  });
+
 });
