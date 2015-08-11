@@ -1,6 +1,4 @@
 $(function() {
-    var list = ['roll', 'desiredroll', 'pitch', 'desiredpitch'];
-    var datalist = [roll, desiredroll, pitch, desiredpitch];
     var series = [],
     i = 0;
 
