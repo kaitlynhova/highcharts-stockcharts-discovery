@@ -154,18 +154,20 @@ $(function() {
                 },
               ]
     });
-    $('#clearit').click(function() {
-      $('#checkboxes').find('input[type=checkbox]:checked').trigger( "click" );
-     });
 
-     $('#checkboxes input').click(function(){
-       var chart = $('#container').highcharts();
-       var series = chart.series;
-       var seriesIndex = this.value;
-       if(series[seriesIndex].visible) {
-         series[seriesIndex].hide();
-       } else {
-         series[seriesIndex].show();
-       }
-     });
+  // CLEAR GRAPH BUTTON
+  $('#clearit').click(function() {
+    $('#checkboxes').find('input[type=checkbox]:checked').trigger( "click" );
+   });
+ // CHECKBOX CLICK LOOP
+ $('#checkboxes input').click(function(){
+   var chart = $('#container').highcharts();
+   var series = chart.series;
+   var seriesIndex = this.value;
+   if(series[seriesIndex].visible) {
+     series[seriesIndex].hide();
+   } else {
+     series[seriesIndex].show();
+   }
+ });
 });
