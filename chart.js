@@ -23,7 +23,7 @@ $(function() {
        {
          type: 'flags',
          data: [],
-         title: ' #',
+         title: [i],
          style: { // text style
                  color: 'white'
              },
@@ -51,7 +51,6 @@ $(function() {
         },
 
         rangeSelector: {
-            selected: 4,
             inputEnabled: false,
             buttonTheme: {
                 visibility: 'hidden'
