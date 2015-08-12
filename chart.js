@@ -3,9 +3,16 @@ $(function() {
     i = 0;
 
     for(i; i < list.length ;i++){
+      if (i == 2){
+        y = 1;
+      }
+      else {
+        y = 0;
+      };
         series.push(
         {
            name: list[i],
+           yAxis: 0,
            id: 'dataseries',
            visible: false,
            data: datalist[i],
@@ -34,12 +41,21 @@ $(function() {
       );
     }
 
-    var chart = new Highcharts.StockChart({
+    $('#container').highcharts('StockChart',{
 
-        chart: {
-            renderTo: 'container'
+        xAxis:{
         },
+        yAxis: [{
+            height: 200,
+            lineWidth: 2,
+            offset:0
+        }, {
+            height: 200,
+            top: 300,
+            lineWidth: 2,
 
+            offset:0
+        }],
         credits: {
             enabled: false
         },
@@ -59,6 +75,9 @@ $(function() {
             }
         },
         plotOptions:{
+          area: {
+            stacking: 'normal'
+        },
              series:{
                  allowPointSelect: true,
                  marker: {
