@@ -17,8 +17,8 @@ Highcharts.theme = {
       backgroundColor: {
          linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
          stops: [
-            [0, '#ffffff'],
-            [1, '#f5f5f5']
+            [0, '#2a2a2b'],
+            [1, '#3e3e40']
          ]
       },
       style: {
@@ -28,14 +28,14 @@ Highcharts.theme = {
    },
    title: {
       style: {
-         color: 'gray',
+         color: '#E0E0E3',
          textTransform: 'uppercase',
          fontSize: '20px'
       }
    },
    subtitle: {
       style: {
-         color: 'gray',
+         color: '#E0E0E3',
          textTransform: 'uppercase'
       }
    },
@@ -43,34 +43,33 @@ Highcharts.theme = {
       gridLineColor: '#707073',
       labels: {
          style: {
-            color: '#333333'
+            color: '#E0E0E3'
          }
       },
       lineColor: '#707073',
-      minorGridLineColor: '#e6e6e6',
+      minorGridLineColor: '#505053',
       tickColor: '#707073',
       title: {
          style: {
-            color: '#333333'
+            color: '#A0A0A3'
 
          }
       }
    },
    yAxis: {
-      lineColor: '#e6e6e6',
-      lineColor: '#333333',
+      gridLineColor: '#707073',
       labels: {
          style: {
-            color: '#333'
+            color: '#E0E0E3'
          }
       },
       lineColor: '#707073',
-      minorGridLineColor: '#e6e6e6',
+      minorGridLineColor: '#505053',
       tickColor: '#707073',
       tickWidth: 1,
       title: {
          style: {
-            color: '#333333'
+            color: '#A0A0A3'
          }
       }
    },
@@ -86,7 +85,7 @@ Highcharts.theme = {
             color: '#B0B0B3'
          },
          marker: {
-            lineColor: 'white'
+            lineColor: '#333'
          }
       },
       boxplot: {
