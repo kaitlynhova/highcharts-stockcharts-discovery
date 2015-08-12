@@ -3,7 +3,6 @@ $(function() {
     i = 0;
 
     for(i; i < list.length ;i++){
-        console.log(list[i]);
         series.push(
         {
            name: list[i],
