@@ -8529,15 +8529,13 @@ var data = [
 [874788, 35.00, 179.15, 14.74, 10.82]
 ];
 
-var arrayLength = data.length;
-
 var roll = [];
 var desiredroll =[];
 var pitch = [];
 var desiredpitch = [];
 
 
-for (var i = 0; i < arrayLength; i++) {
+for (var i = 0; i < data.length; i++) {
     var time = data[i][0];
     roll.push([time, data[i][1]]);
     desiredroll.push([time, data[i][2]]);
